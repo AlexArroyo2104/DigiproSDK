@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DigiproSDK_Example' do
+  pod 'DigiproSDK', :path => '../'
+
+  target 'DigiproSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

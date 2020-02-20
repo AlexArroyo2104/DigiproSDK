@@ -1,0 +1,16 @@
+PODS:
+  - DigiproSDK (0.1.0)
+
+DEPENDENCIES:
+  - DigiproSDK (from `../`)
+
+EXTERNAL SOURCES:
+  DigiproSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DigiproSDK: d94e106c2122a439125b766d4353182fc29bbf88
+
+PODFILE CHECKSUM: 8eca28b6aee57fba5f48ac35b5f2b91d2c0ba695
+
+COCOAPODS: 1.8.4

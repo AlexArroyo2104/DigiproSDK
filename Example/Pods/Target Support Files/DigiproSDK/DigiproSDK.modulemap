@@ -1,0 +1,6 @@
+framework module DigiproSDK {
+  umbrella header "DigiproSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
