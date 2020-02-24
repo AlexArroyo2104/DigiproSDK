@@ -39,20 +39,20 @@ Pod::Spec.new do |s|
   
   
 
- s.default_subspec = 'SO'
- s.subspec 'SO' do |so|
-   so.public_header_files = 'DIGIPROSDKSO.framework/Headers/*.h'
-   so.source_files = 'DIGIPROSDKSO.framework/Headers/*.h'
-   so.vendored_frameworks = 'DIGIPROSDKSO.framework'
- 
- 
- s.default_subspec = 'ATO'
- s.subspec 'ATO' do |ato|
-   ato.public_header_files = 'DIGIPROSDKATO.framework/Headers/*.h'
-   ato.source_files = 'DIGIPROSDKATO.framework/Headers/*.h'
-   ato.vendored_frameworks = 'DIGIPROSDKATO.framework'
+ s.default_subspec = 'SDK'
+ s.subspec 'SDK' do |sdk|
+   sdk.public_header_files = 'DIGIPROSDKSO.framework/Headers/*.h', 'DIGIPROSDKATO.framework/Headers/*.h'
+   sdk.source_files = 'DIGIPROSDKSO.framework/Headers/*.h', 'DIGIPROSDKATO.framework/Headers/*.h'
+   sdk.vendored_frameworks = 'DIGIPROSDKSO.framework', 'DIGIPROSDKATO.framework'
  end
- end
+ 
+# s.default_subspec = 'ATO'
+# s.subspec 'ATO' do |ato|
+#   ato.public_header_files = 'DIGIPROSDKATO.framework/Headers/*.h'
+#   ato.source_files = 'DIGIPROSDKATO.framework/Headers/*.h'
+#   ato.vendored_frameworks = 'DIGIPROSDKATO.framework'
+# end
+
 #  s.default_subspec = 'Core'
 #  s.subspec 'Core' do |core|
 #      core.source_files = 'DigiproSDK/Classes/**/*.{h,m,swift,xib}'
