@@ -45,6 +45,13 @@ Pod::Spec.new do |s|
    so.source_files = 'DIGIPROSDKSO.framework/Headers/*.h'
    so.vendored_frameworks = 'DIGIPROSDKSO.framework'
  end
+ 
+ s.default_subspec = 'ATO'
+ s.subspec 'ATO' do |ato|
+   ato.public_header_files = 'DIGIPROSDKATO.framework/Headers/*.h'
+   ato.source_files = 'DIGIPROSDKATO.framework/Headers/*.h'
+   ato.vendored_frameworks = 'DIGIPROSDKATO.framework'
+ end
   
 #  s.default_subspec = 'Core'
 #  s.subspec 'Core' do |core|
