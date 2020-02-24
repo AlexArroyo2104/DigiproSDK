@@ -35,11 +35,14 @@ Pod::Spec.new do |s|
   s.source_files = "DIGIPROSDK.framework/Headers/*.h"
   s.vendored_frameworks = "DIGIPROSDK.framework"
   
-  s.public_header_files = "DIGIPROSDKSO.framework/Headers/*.h"
-  s.source_files = "DIGIPROSDKSO.framework/Headers/*.h"
-  s.vendored_frameworks = "DIGIPROSDKSO.framework"
+
  
- 
+ s.default_subspec = 'SO'
+ s.subspec 'SO' do |so|
+   so.public_header_files = "DIGIPROSDKSO.framework/Headers/*.h"
+   so.source_files = "DIGIPROSDKSO.framework/Headers/*.h"
+   so.vendored_frameworks = "DIGIPROSDKSO.framework"
+  end
   
 #  s.default_subspec = 'Core'
 #  s.subspec 'Core' do |core|
