@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
     sdk.public_header_files = "DIGIPROSDK.framework/Headers/*.h"
     sdk.source_files = "DIGIPROSDK.framework/Headers/*.h"
     sdk.vendored_frameworks = "DIGIPROSDK.framework"
- end
+
   
 
  s.default_subspec = 'SO'
