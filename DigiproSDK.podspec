@@ -44,7 +44,7 @@ Pod::Spec.new do |s|
    so.public_header_files = 'DIGIPROSDKSO.framework/Headers/*.h'
    so.source_files = 'DIGIPROSDKSO.framework/Headers/*.h'
    so.vendored_frameworks = 'DIGIPROSDKSO.framework'
- end
+ 
  
  s.default_subspec = 'ATO'
  s.subspec 'ATO' do |ato|
@@ -52,7 +52,7 @@ Pod::Spec.new do |s|
    ato.source_files = 'DIGIPROSDKATO.framework/Headers/*.h'
    ato.vendored_frameworks = 'DIGIPROSDKATO.framework'
  end
-  
+ end
 #  s.default_subspec = 'Core'
 #  s.subspec 'Core' do |core|
 #      core.source_files = 'DigiproSDK/Classes/**/*.{h,m,swift,xib}'
