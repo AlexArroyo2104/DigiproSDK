@@ -81,6 +81,7 @@
 		C6B11CFAA115599F3BD950191D5233EA /* Pods-DigiproSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DigiproSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C6F7E28C4D7EFAD0E5F0EF5462597815 /* Pods-DigiproSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DigiproSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C8344516240452B300A4B7D4 /* DIGIPROSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDK.framework; sourceTree = "<group>"; };
+		C834452D240483BA00A4B7D4 /* DIGIPROSDKSO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDKSO.framework; sourceTree = "<group>"; };
 		CE7295F9444C9547C8133C3F729BEADE /* DigiproSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DigiproSDK-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C8344516240452B300A4B7D4 /* DIGIPROSDK.framework */,
+				C834452D240483BA00A4B7D4 /* DIGIPROSDKSO.framework */,
 				9D3A4D1FD853873B2682CBC6842AC38F /* Pod */,
 				90331EB4BE88AD3CFC2FA26BA3EB5868 /* Support Files */,
 			);

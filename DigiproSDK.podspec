@@ -34,6 +34,10 @@ Pod::Spec.new do |s|
   s.public_header_files = "DIGIPROSDK.framework/Headers/*.h"
   s.source_files = "DIGIPROSDK.framework/Headers/*.h"
   s.vendored_frameworks = "DIGIPROSDK.framework"
+  
+  s.public_header_files = "DIGIPROSDKSO.framework/Headers/*.h"
+  s.source_files = "DIGIPROSDKSO.framework/Headers/*.h"
+  s.vendored_frameworks = "DIGIPROSDKSO.framework"
  
  
   
@@ -45,7 +49,7 @@ Pod::Spec.new do |s|
 #      #s.resource_bundles = {
 #      #    'PODDIGIPROSDK' => ['PODDIGIPROSDK/Assets/**/*.{png, xib}']
 #      # }
-#      
+#
 #  end
   
 #  s.subspec 'AppExtension' do |ext|
