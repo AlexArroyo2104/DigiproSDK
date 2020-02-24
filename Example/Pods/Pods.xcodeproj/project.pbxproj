@@ -11,7 +11,7 @@
 		B6D0B6EB81B976474BB05D0A51EC4510 /* Pods-DigiproSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76BCD9FC3CD3AEEB1A5EBC38D32D5646 /* Pods-DigiproSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB818D07DE1B677B98C07A367FA3EE24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		C1D42D0266D6C0BB0BE6612A12851233 /* DigiproSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7295F9444C9547C8133C3F729BEADE /* DigiproSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C880790A23FF213A00407116 /* ClassDigipro.swift in Sources */ = {isa = PBXBuildFile; fileRef = C880790923FF213A00407116 /* ClassDigipro.swift */; };
+		C8344512240442B400A4B7D4 /* DigiproSDK.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A59BBDD59DD4635BD616D0D5F70C74FE /* DigiproSDK.podspec */; };
 		C8B9156CFE086059ABE93AD2AD64F36D /* DigiproSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 11183705B86C33ED63505D264A149414 /* DigiproSDK-dummy.m */; };
 		CFE401618FCDE08AFEDE1A70C087E102 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		DF51C6CB46BE5C3C501FED9DA7C28340 /* Pods-DigiproSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A8235B15B1C56C0A6500B26495998237 /* Pods-DigiproSDK_Tests-dummy.m */; };
@@ -35,6 +35,19 @@
 			remoteInfo = DigiproSDK;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C834452524045BE700A4B7D4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06F89A1A1AC538913B70382226FFA2CC /* DigiproSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DigiproSDK-prefix.pch"; sourceTree = "<group>"; };
@@ -67,7 +80,7 @@
 		ABA97874DE407F4DA2691A6AE6D113A4 /* Pods-DigiproSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DigiproSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		C6B11CFAA115599F3BD950191D5233EA /* Pods-DigiproSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DigiproSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C6F7E28C4D7EFAD0E5F0EF5462597815 /* Pods-DigiproSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DigiproSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C880790923FF213A00407116 /* ClassDigipro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClassDigipro.swift; path = DigiproSDK/Classes/ClassDigipro.swift; sourceTree = "<group>"; };
+		C8344516240452B300A4B7D4 /* DIGIPROSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDK.framework; sourceTree = "<group>"; };
 		CE7295F9444C9547C8133C3F729BEADE /* DigiproSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DigiproSDK-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +115,7 @@
 		0EA3C0B4AA2DA1C11291C86F4533ED7E /* DigiproSDK */ = {
 			isa = PBXGroup;
 			children = (
-				C880790923FF213A00407116 /* ClassDigipro.swift */,
+				C8344516240452B300A4B7D4 /* DIGIPROSDK.framework */,
 				9D3A4D1FD853873B2682CBC6842AC38F /* Pod */,
 				90331EB4BE88AD3CFC2FA26BA3EB5868 /* Support Files */,
 			);
@@ -170,9 +183,9 @@
 		9D3A4D1FD853873B2682CBC6842AC38F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				07DB464BF8CD0CD37FBEAE904F98EE83 /* README.md */,
 				A59BBDD59DD4635BD616D0D5F70C74FE /* DigiproSDK.podspec */,
 				796A16657C47F33BDB06FA97F08B9B8D /* LICENSE */,
-				07DB464BF8CD0CD37FBEAE904F98EE83 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -259,6 +272,7 @@
 				F0B65A168F116D095E8EEA41F50A5030 /* Sources */,
 				4A16619EBBB5EC045AA84A92815E63D4 /* Frameworks */,
 				BE4C713B7AF504D1A3382C7317B3BE60 /* Resources */,
+				C834452524045BE700A4B7D4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,7 +328,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 				TargetAttributes = {
 					2AD010565AC994D6CA909E687DB4DB7F = {
 						DevelopmentTeam = 5FB4C6HE93;
@@ -329,6 +343,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 95073D63D285948D892C742E20CF7BCB /* Products */;
@@ -354,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8344512240442B400A4B7D4 /* DigiproSDK.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +404,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B9156CFE086059ABE93AD2AD64F36D /* DigiproSDK-dummy.m in Sources */,
-				C880790A23FF213A00407116 /* ClassDigipro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +564,7 @@
 			baseConfigurationReference = 5E9285EF5CEFC9B2BA7F1503163BCFA1 /* DigiproSDK.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -557,10 +572,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5FB4C6HE93;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/DigiproSDK/DigiproSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DigiproSDK/DigiproSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -573,6 +593,7 @@
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -710,7 +731,7 @@
 			baseConfigurationReference = 5E9285EF5CEFC9B2BA7F1503163BCFA1 /* DigiproSDK.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
@@ -718,10 +739,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 5FB4C6HE93;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PREFIX_HEADER = "Target Support Files/DigiproSDK/DigiproSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DigiproSDK/DigiproSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -734,6 +760,7 @@
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
