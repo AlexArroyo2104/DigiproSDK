@@ -34,18 +34,18 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'SDK'
   s.subspec 'SDK' do |sdk|
-    sdk.public_header_files = "DIGIPROSDK.framework/Headers/*.h"
-    sdk.source_files = "DIGIPROSDK.framework/Headers/*.h"
-    sdk.vendored_frameworks = "DIGIPROSDK.framework"
-
+    sdk.public_header_files = 'DIGIPROSDK.framework/Headers/*.h'
+    sdk.source_files = 'DIGIPROSDK.framework/Headers/*.h'
+    sdk.vendored_frameworks = 'DIGIPROSDK.framework'
+  end
   
 
  s.default_subspec = 'SO'
  s.subspec 'SO' do |so|
-   so.public_header_files = "DIGIPROSDKSO.framework/Headers/*.h"
-   so.source_files = "DIGIPROSDKSO.framework/Headers/*.h"
-   so.vendored_frameworks = "DIGIPROSDKSO.framework"
-  end
+   so.public_header_files = 'DIGIPROSDKSO.framework/Headers/*.h'
+   so.source_files = 'DIGIPROSDKSO.framework/Headers/*.h'
+   so.vendored_frameworks = 'DIGIPROSDKSO.framework'
+ end
   
 #  s.default_subspec = 'Core'
 #  s.subspec 'Core' do |core|
@@ -65,13 +65,4 @@ Pod::Spec.new do |s|
 #  end
 #
 #
-  
-  
-  # s.resource_bundles = {
-  #   'DigiproSDK' => ['DigiproSDK/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
