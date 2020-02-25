@@ -272,6 +272,8 @@ SWIFT_CLASS("_TtC12DIGIPROSDKSO28TablaPlantillaViewController")
 
 
 
+
+
 SWIFT_CLASS("_TtC12DIGIPROSDKSO8jsonTemp")
 @interface jsonTemp : EVObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;

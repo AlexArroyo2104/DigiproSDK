@@ -208,6 +208,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @class FolioAutomaticoResult;
 @class NSDictionary;
 @class CompareFacesResult;
+enum enumErrorType : NSInteger;
 
 SWIFT_PROTOCOL("_TtP10DIGIPROSDK11APIDelegate_")
 @protocol APIDelegate
@@ -225,9 +226,9 @@ SWIFT_PROTOCOL("_TtP10DIGIPROSDK11APIDelegate_")
 - (void)didSendToServerFormatos;
 - (void)didSendToServerAnexos;
 @required
-- (void)sendStatusWithMessage:(NSString * _Nonnull)message error:(NSString * _Nonnull)error isLog:(BOOL)isLog isNotification:(BOOL)isNotification;
+- (void)sendStatusWithMessage:(NSString * _Nonnull)message error:(enum enumErrorType)error isLog:(BOOL)isLog isNotification:(BOOL)isNotification;
 - (void)sendStatusCompletitionWithInitial:(float)initial current:(float)current final:(float)final;
-- (void)sendStatusCodeMessageWithMessage:(NSString * _Nonnull)message error:(NSString * _Nonnull)error;
+- (void)sendStatusCodeMessageWithMessage:(NSString * _Nonnull)message error:(enum enumErrorType)error;
 @optional
 - (void)responseSplashWithMessage:(NSString * _Nonnull)message;
 - (void)wrongCodeResponseWithMessage:(NSString * _Nonnull)message;
@@ -236,12 +237,17 @@ SWIFT_PROTOCOL("_TtP10DIGIPROSDK11APIDelegate_")
 - (void)errorDescargaResponseWithMessage:(NSString * _Nonnull)message;
 - (void)didValidLoginIpad;
 @required
-- (void)didSendErrorWithMessage:(NSString * _Nonnull)message error:(NSString * _Nonnull)error;
-- (void)didSendResponseWithMessage:(NSString * _Nonnull)message error:(NSString * _Nonnull)error;
-- (void)didSendResponseHUDWithMessage:(NSString * _Nonnull)message error:(NSString * _Nonnull)error porcentage:(NSInteger)porcentage;
+- (void)didSendErrorWithMessage:(NSString * _Nonnull)message error:(enum enumErrorType)error;
+- (void)didSendResponseWithMessage:(NSString * _Nonnull)message error:(enum enumErrorType)error;
+- (void)didSendResponseHUDWithMessage:(NSString * _Nonnull)message error:(enum enumErrorType)error porcentage:(NSInteger)porcentage;
 @optional
 - (void)didSendResponseStatusWithTitle:(NSString * _Nonnull)title subtitle:(NSString * _Nonnull)subtitle porcentage:(float)porcentage;
 @end
+
+/// Enumerator for all types of success posibilities
+typedef SWIFT_ENUM(NSInteger, APISuccessResponse, closed) {
+  APISuccessResponseSuccess = 200,
+};
 
 @class NSCoder;
 @class UIView;
@@ -368,6 +374,7 @@ SWIFT_CLASS("_TtC10DIGIPROSDK19AlertViewController")
 
 
 
+/// Atributos
 SWIFT_CLASS("_TtC10DIGIPROSDK9Atributos")
 @interface Atributos : EVObject
 @property (nonatomic, copy) NSString * _Nonnull nombre;
@@ -390,6 +397,7 @@ SWIFT_CLASS("_TtC10DIGIPROSDK19Atributos_Expresion")
 @end
 
 
+/// Atributos Generales
 SWIFT_CLASS("_TtC10DIGIPROSDK19Atributos_Generales")
 @interface Atributos_Generales : Atributos
 @property (nonatomic, copy) NSString * _Nonnull icono;
@@ -1590,6 +1598,7 @@ SWIFT_CLASS("_TtC10DIGIPROSDK21Atributos_rangofechas")
 @property (nonatomic, copy) NSString * _Nonnull valorinicial;
 @property (nonatomic, copy) NSString * _Nonnull valormetadatofinal;
 @property (nonatomic, copy) NSString * _Nonnull valormetadatoinicial;
+@property (nonatomic, copy) NSString * _Nonnull valormetadatorango;
 @property (nonatomic, copy) NSString * _Nonnull valorrango;
 @property (nonatomic) BOOL visible;
 @property (nonatomic) BOOL visiblecontenido;
@@ -2361,16 +2370,6 @@ SWIFT_CLASS("_TtC10DIGIPROSDK16DecimalFormatter")
 ///
 - (BOOL)getObjectValue:(id _Nullable * _Nullable)obj forString:(NSString * _Nonnull)string range:(NSRange * _Nullable)rangep error:(NSError * _Nullable * _Nullable)error;
 @end
-
-
-SWIFT_CLASS("_TtC10DIGIPROSDK8DemoView")
-@interface DemoView : UIView
-- (void)awakeFromNib;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 
 @class NSManagedObjectContext;
 @class NSEntityDescription;
@@ -3679,17 +3678,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) Class _Nonnull layer
 @property (nonatomic) BOOL isAccessibilityElement;
 @end
 
-@class UIEvent;
-
-SWIFT_CLASS("_TtC10DIGIPROSDK8MenuView")
-@interface MenuView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
-- (UIView * _Nullable)hitTest:(CGPoint)point withEvent:(UIEvent * _Nullable)event SWIFT_WARN_UNUSED_RESULT;
-- (void)tintColorDidChange;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
 
 
 
@@ -3707,6 +3695,7 @@ SWIFT_CLASS("_TtC10DIGIPROSDK8MenuView")
 
 
 @class UITouch;
+@class UIEvent;
 
 /// Class for the navigation accessory view used in FormViewController
 SWIFT_CLASS("_TtC10DIGIPROSDK23NavigationAccessoryView")
@@ -4151,13 +4140,6 @@ SWIFT_CLASS("_TtC10DIGIPROSDK15SepomexResponse")
 @end
 
 
-SWIFT_CLASS("_TtC10DIGIPROSDK20ShortcutMenuItemView")
-@interface ShortcutMenuItemView : UIView
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-@end
-
-
 /// A view controller that allows the user to draw a signature and provides additional functionality.
 SWIFT_CLASS("_TtC10DIGIPROSDK30SignatureDrawingViewController")
 @interface SignatureDrawingViewController : UIViewController
@@ -4235,34 +4217,10 @@ SWIFT_CLASS("_TtC10DIGIPROSDK15SpreadsheetView")
 @end
 
 
-SWIFT_CLASS("_TtC10DIGIPROSDK15StageDesignView")
-@interface StageDesignView : UIView
-- (void)awakeFromNib;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
 SWIFT_CLASS("_TtC10DIGIPROSDK27StatusBarNotificationBanner")
 @interface StatusBarNotificationBanner : BaseNotificationBanner
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4300,35 +4258,9 @@ SWIFT_CLASS("_TtC10DIGIPROSDK27StatusBarNotificationBanner")
 
 
 
-
-
-@interface UIScrollView (SWIFT_EXTENSION(DIGIPROSDK))
-- (CGPoint)scrollOffsetFor:(CGRect)rect SWIFT_WARN_UNUSED_RESULT;
-- (void)scrollToVisible:(CGRect)rect animated:(BOOL)animated;
-@end
-
-
-
-
-
-
-
-
-
-
-
-
 @interface UITabBarController (SWIFT_EXTENSION(DIGIPROSDK))
 @property (nonatomic, copy) NSString * _Nullable heroTabBarAnimationTypeString SWIFT_DEPRECATED_MSG("Use hero.tabBarAnimationTypeString instead");
 @end
-
-
-
-
-
-
-
-
 
 
 
@@ -4412,6 +4344,14 @@ SWIFT_CLASS("_TtC10DIGIPROSDK10Validacion")
 - (BOOL)skipPropertyValue:(id _Nonnull)value key:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
+/// Enumerator for kind of errors: .info, .success, .warning, .error
+typedef SWIFT_ENUM(NSInteger, enumErrorType, closed) {
+  enumErrorTypeInfo = 0,
+  enumErrorTypeSuccess = 1,
+  enumErrorTypeWarning = 2,
+  enumErrorTypeError = 3,
+};
 
 
 SWIFT_CLASS("_TtC10DIGIPROSDK14myCustomSlider")

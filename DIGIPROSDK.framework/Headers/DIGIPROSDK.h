@@ -16,7 +16,6 @@ FOUNDATION_EXPORT const unsigned char DIGIPROSDKVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <DIGIPROSDK/PublicHeader.h>
 
-
 #import <DIGIPROSDK/XMLDictionary.h>
 #import <DIGIPROSDK/FCFileManager.h>
 #import <DIGIPROSDK/UIScrollView+EmptyDataSet.h>
@@ -36,3 +35,4 @@ FOUNDATION_EXPORT const unsigned char DIGIPROSDKVersionString[];
 #import <DIGIPROSDK/RECommonFunctions.h>
 #import <DIGIPROSDK/RESideMenu.h>
 #import <DIGIPROSDK/UIViewController+RESideMenu.h>
+#import <DIGIPROSDK/DLRadioButton.h>
