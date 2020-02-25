@@ -41,6 +41,8 @@ Pod::Spec.new do |s|
    sdk.vendored_frameworks = 'DIGIPROSDK.framework', 'DIGIPROSDKSO.framework', 'DIGIPROSDKATO.framework'
  end
  
+ 
+ 
 # s.default_subspec = 'ATO'
 # s.subspec 'ATO' do |ato|
 #   ato.public_header_files = 'DIGIPROSDKATO.framework/Headers/*.h'
