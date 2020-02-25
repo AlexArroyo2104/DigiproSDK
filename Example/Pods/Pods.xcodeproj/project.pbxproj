@@ -83,6 +83,7 @@
 		C8344516240452B300A4B7D4 /* DIGIPROSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDK.framework; sourceTree = "<group>"; };
 		C89073C624056B9B0064AA48 /* DIGIPROSDKUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDKUI.framework; sourceTree = "<group>"; };
 		C89073C724056C070064AA48 /* DIGIPROSDKBNL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDKBNL.framework; sourceTree = "<group>"; };
+		C89073C824056DB40064AA48 /* DIGIPROSDKSO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIGIPROSDKSO.framework; sourceTree = "<group>"; };
 		CE7295F9444C9547C8133C3F729BEADE /* DigiproSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DigiproSDK-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +121,7 @@
 				C8344516240452B300A4B7D4 /* DIGIPROSDK.framework */,
 				C89073C624056B9B0064AA48 /* DIGIPROSDKUI.framework */,
 				C89073C724056C070064AA48 /* DIGIPROSDKBNL.framework */,
+				C89073C824056DB40064AA48 /* DIGIPROSDKSO.framework */,
 				9D3A4D1FD853873B2682CBC6842AC38F /* Pod */,
 				90331EB4BE88AD3CFC2FA26BA3EB5868 /* Support Files */,
 			);

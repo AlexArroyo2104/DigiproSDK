@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '11.0'
   s.swift_versions = '5.0'
   
-  s.public_header_files = 'DIGIPROSDK.framework/Headers/*.h', 'DIGIPROSDKUI.framework/Headers/*.h', 'DIGIPROSDKBNL.framework/Headers/*.h'
-  s.source_files = 'DIGIPROSDK.framework/Headers/*.h', 'DIGIPROSDKUI.framework/Headers/*.h', 'DIGIPROSDKBNL.framework/Headers/*.h'
-  s.vendored_frameworks = 'DIGIPROSDK.framework', 'DIGIPROSDKUI.framework', 'DIGIPROSDKBNL.framework'
+  s.public_header_files = 'DIGIPROSDK.framework/Headers/*.h', 'DIGIPROSDKUI.framework/Headers/*.h', 'DIGIPROSDKBNL.framework/Headers/*.h', 'DIGIPROSDKSO.framework/Headers/*.h'
+  s.source_files = 'DIGIPROSDK.framework/Headers/*.h', 'DIGIPROSDKUI.framework/Headers/*.h', 'DIGIPROSDKBNL.framework/Headers/*.h',  'DIGIPROSDKSO.framework/Headers/*.h'
+  s.vendored_frameworks = 'DIGIPROSDK.framework', 'DIGIPROSDKUI.framework', 'DIGIPROSDKBNL.framework', 'DIGIPROSDKSO.framework'
 
   
 # s.default_subspec = 'SDK'
