@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   
   s.public_header_files = 'DIGIPROSDK.framework/Headers/*.h', 'DIGIPROSDKUI.framework/Headers/*.h', 'DIGIPROSDKBNL.framework/Headers/*.h', 'DIGIPROSDKSO.framework/Headers/*.h', 'DIGIPROSDKATO.framework/Headers/*.h','DIGIPROSDKFO.framework/Headers/*.h','DIGIPROSDKVO.framework/Headers/*.h'
   s.source_files = 'DIGIPROSDK.framework/Headers/*.h', 'DIGIPROSDKUI.framework/Headers/*.h', 'DIGIPROSDKBNL.framework/Headers/*.h',  'DIGIPROSDKSO.framework/Headers/*.h', 'DIGIPROSDKATO.framework/Headers/*.h','DIGIPROSDKFO.framework/Headers/*.h','DIGIPROSDKVO.framework/Headers/*.h'
-  s.vendored_frameworks = 'DIGIPROSDK.framework', 'DIGIPROSDKUI.framework', 'DIGIPROSDKBNL.framework', 'DIGIPROSDKSO.framework','DIGIPROSDKATO.framework','DIGIPROSDKFO.framework', 'DIGIPROSDKVO.framework'
+  s.vendored_frameworks = 'DIGIPROSDK.framework', 'DIGIPROSDKUI.framework', 'DIGIPROSDKBNL.framework', 'DIGIPROSDKSO.framework','DIGIPROSDKATO.framework','DIGIPROSDKFO.framework', '                                      DIGIPROSDKVO.framework'
 
   
 # s.default_subspec = 'SDK'
